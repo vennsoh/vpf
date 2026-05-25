@@ -1,0 +1,8 @@
+{
+  "name": "vpf",
+  "script": "dev:web",
+  "apps": {
+    "apps/web": { "name": "web" },
+    "apps/docs": { "name": "docs" }
+  }
+}
