@@ -12,7 +12,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@workspace/ui/components/context-menu"
+} from "@vpf/ui/components/context-menu"
 
 export default function ContextMenuDemo() {
   return (

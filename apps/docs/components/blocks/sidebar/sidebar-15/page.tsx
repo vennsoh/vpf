@@ -5,13 +5,13 @@ import {
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@workspace/ui/components/breadcrumb"
-import { Separator } from "@workspace/ui/components/separator"
+} from "@vpf/ui/components/breadcrumb"
+import { Separator } from "@vpf/ui/components/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@workspace/ui/components/sidebar"
+} from "@vpf/ui/components/sidebar"
 
 export default function Page() {
   return (

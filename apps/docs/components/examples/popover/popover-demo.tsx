@@ -1,11 +1,11 @@
-import { Button } from "@workspace/ui/components/button"
-import { Input } from "@workspace/ui/components/input"
-import { Label } from "@workspace/ui/components/label"
+import { Button } from "@vpf/ui/components/button"
+import { Input } from "@vpf/ui/components/input"
+import { Label } from "@vpf/ui/components/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@workspace/ui/components/popover"
+} from "@vpf/ui/components/popover"
 
 export default function PopoverDemo() {
   return (

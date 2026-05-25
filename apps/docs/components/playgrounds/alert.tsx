@@ -4,7 +4,7 @@ import {
 	Alert,
 	AlertDescription,
 	AlertTitle,
-} from "@workspace/ui/components/alert"
+} from "@vpf/ui/components/alert"
 
 import {
 	PropsPlayground,

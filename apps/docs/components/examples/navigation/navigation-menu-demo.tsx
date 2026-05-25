@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 
-import { useIsMobile } from "@workspace/ui/hooks/use-mobile"
+import { useIsMobile } from "@vpf/ui/hooks/use-mobile"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@workspace/ui/components/navigation-menu"
+} from "@vpf/ui/components/navigation-menu"
 
 const components: { title: string; href: string; description: string }[] = [
   {

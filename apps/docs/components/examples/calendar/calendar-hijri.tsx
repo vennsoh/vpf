@@ -11,7 +11,7 @@ import { getDefaultClassNames, type DayButton } from "react-day-picker"
 import { DayPicker } from "react-day-picker/persian"
 
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@workspace/ui/components/button"
+import { Button, buttonVariants } from "@vpf/ui/components/button"
 
 const vazirmatn = Vazirmatn({ subsets: ["arabic"] })
 

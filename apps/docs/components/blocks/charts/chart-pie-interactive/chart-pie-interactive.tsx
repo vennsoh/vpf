@@ -13,21 +13,21 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 import {
   ChartContainer,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@workspace/ui/components/chart"
+} from "@vpf/ui/components/chart"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select"
+} from "@vpf/ui/components/select"
 
 export const description = "An interactive pie chart"
 

@@ -11,7 +11,7 @@
  * - A typed manifest is emitted at apps/docs/lib/registry.generated.ts.
  *
  * Imports referencing @/registry/new-york-v4/{ui,hooks,lib}/* are rewritten to
- * @workspace/ui/* so the synced files use the monorepo's UI package.
+ * @vpf/ui/* so the synced files use the monorepo's UI package.
  */
 
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
@@ -234,15 +234,15 @@ function rewriteImports(
 	let out = source;
 	out = out.replace(
 		/@\/registry\/new-york-v4\/ui\/([\w./-]+)/g,
-		"@workspace/ui/components/$1"
+		"@vpf/ui/components/$1"
 	);
 	out = out.replace(
 		/@\/registry\/new-york-v4\/hooks\/([\w./-]+)/g,
-		"@workspace/ui/hooks/$1"
+		"@vpf/ui/hooks/$1"
 	);
 	out = out.replace(
 		/@\/registry\/new-york-v4\/lib\/([\w./-]+)/g,
-		"@workspace/ui/lib/$1"
+		"@vpf/ui/lib/$1"
 	);
 	if (context?.kind === "block") {
 		// Rewrite intra-block references like

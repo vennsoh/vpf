@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemHeader,
   ItemTitle,
-} from "@workspace/ui/components/item"
+} from "@vpf/ui/components/item"
 
 const models = [
   {

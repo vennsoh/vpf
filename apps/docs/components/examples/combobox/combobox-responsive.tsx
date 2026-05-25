@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Command,
   CommandEmpty,
@@ -11,17 +11,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@workspace/ui/components/command"
+} from "@vpf/ui/components/command"
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@workspace/ui/components/drawer"
+} from "@vpf/ui/components/drawer"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@workspace/ui/components/popover"
+} from "@vpf/ui/components/popover"
 
 type Status = {
   value: string

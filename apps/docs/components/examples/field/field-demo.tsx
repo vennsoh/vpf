@@ -1,5 +1,5 @@
-import { Button } from "@workspace/ui/components/button"
-import { Checkbox } from "@workspace/ui/components/checkbox"
+import { Button } from "@vpf/ui/components/button"
+import { Checkbox } from "@vpf/ui/components/checkbox"
 import {
   Field,
   FieldDescription,
@@ -8,16 +8,16 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@workspace/ui/components/field"
-import { Input } from "@workspace/ui/components/input"
+} from "@vpf/ui/components/field"
+import { Input } from "@vpf/ui/components/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select"
-import { Textarea } from "@workspace/ui/components/textarea"
+} from "@vpf/ui/components/select"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function FieldDemo() {
   return (

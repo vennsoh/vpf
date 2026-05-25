@@ -1,4 +1,4 @@
-import { Spinner } from "@workspace/ui/components/spinner"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function SpinnerBasic() {
   return (

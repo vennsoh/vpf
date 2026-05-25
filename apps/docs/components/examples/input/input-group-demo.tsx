@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@workspace/ui/components/dropdown-menu"
+} from "@vpf/ui/components/dropdown-menu"
 import {
   InputGroup,
   InputGroupAddon,
@@ -14,13 +14,13 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@workspace/ui/components/input-group"
-import { Separator } from "@workspace/ui/components/separator"
+} from "@vpf/ui/components/input-group"
+import { Separator } from "@vpf/ui/components/separator"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip"
+} from "@vpf/ui/components/tooltip"
 
 export default function InputGroupDemo() {
   return (

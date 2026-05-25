@@ -6,7 +6,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@workspace/ui/components/item"
+} from "@vpf/ui/components/item"
 
 export default function ItemLink() {
   return (

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { MoreHorizontal } from "lucide-react"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Command,
   CommandEmpty,
@@ -11,7 +11,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@workspace/ui/components/command"
+} from "@vpf/ui/components/command"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,7 +24,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@workspace/ui/components/dropdown-menu"
+} from "@vpf/ui/components/dropdown-menu"
 
 const labels = [
   "feature",

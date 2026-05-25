@@ -1,10 +1,10 @@
 import { IconPlus } from "@tabler/icons-react"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   ButtonGroup,
   ButtonGroupSeparator,
-} from "@workspace/ui/components/button-group"
+} from "@vpf/ui/components/button-group"
 
 export default function ButtonGroupSplit() {
   return (

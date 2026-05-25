@@ -1,11 +1,11 @@
-import { Button } from "@workspace/ui/components/button"
-import { ButtonGroup } from "@workspace/ui/components/button-group"
-import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
+import { Button } from "@vpf/ui/components/button"
+import { ButtonGroup } from "@vpf/ui/components/button-group"
+import { Kbd, KbdGroup } from "@vpf/ui/components/kbd"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip"
+} from "@vpf/ui/components/tooltip"
 
 export default function KbdTooltip() {
   return (

@@ -1,6 +1,6 @@
 "use client"
 
-import { Slider } from "@workspace/ui/components/slider"
+import { Slider } from "@vpf/ui/components/slider"
 
 import {
 	PropsPlayground,

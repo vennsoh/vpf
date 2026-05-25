@@ -8,7 +8,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select"
+} from "@vpf/ui/components/select"
 
 export default function SelectScrollable() {
   return (

@@ -1,4 +1,4 @@
-import { cn } from "@workspace/ui/lib/utils"
+import { cn } from "@vpf/ui/lib/utils"
 import { IconLoader } from "@tabler/icons-react"
 
 function Spinner({ className, ...props }: React.ComponentProps<"svg">) {

@@ -7,7 +7,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 
 import { blocks } from "@/lib/registry"
 

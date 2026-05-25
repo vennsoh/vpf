@@ -1,7 +1,7 @@
 import {
   NativeSelect,
   NativeSelectOption,
-} from "@workspace/ui/components/native-select"
+} from "@vpf/ui/components/native-select"
 
 export default function NativeSelectDemo() {
   return (

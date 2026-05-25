@@ -6,7 +6,7 @@ Turborepo + pnpm workspace. Built on the shadcn/ui monorepo template.
 
 | Path | Purpose |
 | --- | --- |
-| `packages/ui` | Shared UI library (`@workspace/ui`). All 55 shadcn primitives live here. |
+| `packages/ui` | Shared UI library (`@vpf/ui`). All 55 shadcn primitives live here. |
 | `packages/eslint-config`, `packages/typescript-config` | Shared lint + TS configs. |
 | `apps/docs` | Design-system showcase site on port 3001. Renders every component, registry example, and block with theme + prop playgrounds. |
 | `apps/web` | Reserved for the portfolio. Runs on port 3000. |
@@ -43,7 +43,7 @@ pnpm dlx shadcn@latest add --all -c packages/ui
 Import into any app:
 
 ```tsx
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@vpf/ui/components/button";
 ```
 
 ## Syncing shadcn examples and blocks
@@ -69,7 +69,7 @@ Re-run any time shadcn ships new items.
 
 Workspace packages declare their own runtime deps in their own `package.json` — this is intentional and correct for pnpm. `apps/docs` redeclares libraries like `recharts`, `sonner`, `react-hook-form`, etc. that the synced shadcn examples import directly at the app level, even though `packages/ui` also declares them. pnpm doesn't hoist transitive deps across workspaces by default, so each app needs to list what it imports.
 
-If you add a new library inside an app, declare it in that app's `package.json`. If you add it to `packages/ui`, it's available to consumers of `@workspace/ui` automatically — but apps that also reach into the library through their own imports will need to declare it too.
+If you add a new library inside an app, declare it in that app's `package.json`. If you add it to `packages/ui`, it's available to consumers of `@vpf/ui` automatically — but apps that also reach into the library through their own imports will need to declare it too.
 
 ## Production build typecheck
 

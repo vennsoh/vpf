@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@workspace/ui/components/kbd"
+import { Kbd, KbdGroup } from "@vpf/ui/components/kbd"
 
 export default function KbdGroupExample() {
   return (

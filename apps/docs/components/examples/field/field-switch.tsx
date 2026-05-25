@@ -3,8 +3,8 @@ import {
   FieldContent,
   FieldDescription,
   FieldLabel,
-} from "@workspace/ui/components/field"
-import { Switch } from "@workspace/ui/components/switch"
+} from "@vpf/ui/components/field"
+import { Switch } from "@vpf/ui/components/switch"
 
 export default function FieldSwitch() {
   return (

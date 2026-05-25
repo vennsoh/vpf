@@ -16,11 +16,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 import {
   ChartContainer,
   type ChartConfig,
-} from "@workspace/ui/components/chart"
+} from "@vpf/ui/components/chart"
 
 export const description = "A radial chart with text"
 

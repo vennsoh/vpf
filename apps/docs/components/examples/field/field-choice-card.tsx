@@ -6,11 +6,11 @@ import {
   FieldLabel,
   FieldSet,
   FieldTitle,
-} from "@workspace/ui/components/field"
+} from "@vpf/ui/components/field"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@workspace/ui/components/radio-group"
+} from "@vpf/ui/components/radio-group"
 
 export default function FieldChoiceCard() {
   return (

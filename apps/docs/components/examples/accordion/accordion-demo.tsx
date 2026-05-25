@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@workspace/ui/components/accordion"
+} from "@vpf/ui/components/accordion"
 
 export default function AccordionDemo() {
   return (

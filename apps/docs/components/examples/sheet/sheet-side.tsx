@@ -1,8 +1,8 @@
 "use client"
 
-import { Button } from "@workspace/ui/components/button"
-import { Input } from "@workspace/ui/components/input"
-import { Label } from "@workspace/ui/components/label"
+import { Button } from "@vpf/ui/components/button"
+import { Input } from "@vpf/ui/components/input"
+import { Label } from "@vpf/ui/components/label"
 import {
   Sheet,
   SheetClose,
@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@workspace/ui/components/sheet"
+} from "@vpf/ui/components/sheet"
 
 const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 

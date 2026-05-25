@@ -4,8 +4,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "@workspace/ui/components/field"
-import { Textarea } from "@workspace/ui/components/textarea"
+} from "@vpf/ui/components/field"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function FieldTextarea() {
   return (

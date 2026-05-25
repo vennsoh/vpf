@@ -11,7 +11,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty"
+} from "@vpf/ui/components/empty"
 
 export default function EmptyIcon() {
   return (

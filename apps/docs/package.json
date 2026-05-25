@@ -21,7 +21,7 @@
 		"@tabler/icons-react": "^3.44.0",
 		"@tanstack/react-form": "^1.32.0",
 		"@tanstack/react-table": "^8.21.3",
-		"@workspace/ui": "workspace:*",
+		"@vpf/ui": "workspace:*",
 		"date-fns": "^4.3.0",
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
@@ -45,8 +45,8 @@
 		"@types/node": "^25.1.0",
 		"@types/react": "^19.2.10",
 		"@types/react-dom": "^19.2.3",
-		"@workspace/eslint-config": "workspace:^",
-		"@workspace/typescript-config": "workspace:*",
+		"@vpf/eslint-config": "workspace:^",
+		"@vpf/typescript-config": "workspace:*",
 		"eslint": "^9.39.2",
 		"typescript": "^5.9.3"
 	}

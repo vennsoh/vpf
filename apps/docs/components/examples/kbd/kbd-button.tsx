@@ -1,5 +1,5 @@
-import { Button } from "@workspace/ui/components/button"
-import { Kbd } from "@workspace/ui/components/kbd"
+import { Button } from "@vpf/ui/components/button"
+import { Kbd } from "@vpf/ui/components/kbd"
 
 export default function KbdButton() {
   return (

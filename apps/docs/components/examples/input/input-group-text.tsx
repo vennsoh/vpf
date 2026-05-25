@@ -4,7 +4,7 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@workspace/ui/components/input-group"
+} from "@vpf/ui/components/input-group"
 
 export default function InputGroupTextExample() {
   return (

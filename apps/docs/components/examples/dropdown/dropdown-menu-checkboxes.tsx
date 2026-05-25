@@ -3,7 +3,7 @@
 import * as React from "react"
 import type { DropdownMenu as DropdownMenuPrimitive } from "radix-ui"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@workspace/ui/components/dropdown-menu"
+} from "@vpf/ui/components/dropdown-menu"
 
 type Checked = React.ComponentProps<
   typeof DropdownMenuPrimitive.CheckboxItem

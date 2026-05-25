@@ -2,7 +2,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@workspace/ui/components/resizable"
+} from "@vpf/ui/components/resizable"
 
 export default function ResizableDemo() {
   return (

@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Calendar } from "@workspace/ui/components/calendar"
+import { Calendar } from "@vpf/ui/components/calendar"
 
 export default function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())

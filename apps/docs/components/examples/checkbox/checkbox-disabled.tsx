@@ -1,4 +1,4 @@
-import { Checkbox } from "@workspace/ui/components/checkbox"
+import { Checkbox } from "@vpf/ui/components/checkbox"
 
 export default function CheckboxDisabled() {
   return (

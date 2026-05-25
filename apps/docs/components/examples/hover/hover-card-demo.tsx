@@ -4,13 +4,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar"
-import { Button } from "@workspace/ui/components/button"
+} from "@vpf/ui/components/avatar"
+import { Button } from "@vpf/ui/components/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@workspace/ui/components/hover-card"
+} from "@vpf/ui/components/hover-card"
 
 export default function HoverCardDemo() {
   return (

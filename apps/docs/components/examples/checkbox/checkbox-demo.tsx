@@ -1,7 +1,7 @@
 "use client"
 
-import { Checkbox } from "@workspace/ui/components/checkbox"
-import { Label } from "@workspace/ui/components/label"
+import { Checkbox } from "@vpf/ui/components/checkbox"
+import { Label } from "@vpf/ui/components/label"
 
 export default function CheckboxDemo() {
   return (

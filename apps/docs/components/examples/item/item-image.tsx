@@ -7,7 +7,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@workspace/ui/components/item"
+} from "@vpf/ui/components/item"
 
 const music = [
   {

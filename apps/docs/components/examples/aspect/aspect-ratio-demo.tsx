@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import { AspectRatio } from "@workspace/ui/components/aspect-ratio"
+import { AspectRatio } from "@vpf/ui/components/aspect-ratio"
 
 export default function AspectRatioDemo() {
   return (

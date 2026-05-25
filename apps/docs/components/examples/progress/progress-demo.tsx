@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Progress } from "@workspace/ui/components/progress"
+import { Progress } from "@vpf/ui/components/progress"
 
 export default function ProgressDemo() {
   const [progress, setProgress] = React.useState(13)

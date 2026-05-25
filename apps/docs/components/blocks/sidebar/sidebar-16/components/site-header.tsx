@@ -10,10 +10,10 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@workspace/ui/components/breadcrumb"
-import { Button } from "@workspace/ui/components/button"
-import { Separator } from "@workspace/ui/components/separator"
-import { useSidebar } from "@workspace/ui/components/sidebar"
+} from "@vpf/ui/components/breadcrumb"
+import { Button } from "@vpf/ui/components/button"
+import { Separator } from "@vpf/ui/components/separator"
+import { useSidebar } from "@vpf/ui/components/sidebar"
 
 export function SiteHeader() {
   const { toggleSidebar } = useSidebar()

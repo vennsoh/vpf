@@ -15,7 +15,7 @@ import { XIcon } from "lucide-react"
 import { toast } from "sonner"
 import * as v from "valibot"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Card,
   CardContent,
@@ -23,7 +23,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 import {
   Field,
   FieldContent,
@@ -32,13 +32,13 @@ import {
   FieldGroup,
   FieldLegend,
   FieldSet,
-} from "@workspace/ui/components/field"
+} from "@vpf/ui/components/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@workspace/ui/components/input-group"
+} from "@vpf/ui/components/input-group"
 
 const FormSchema = v.object({
   emails: v.pipe(

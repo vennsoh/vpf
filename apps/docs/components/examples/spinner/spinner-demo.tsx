@@ -3,8 +3,8 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-} from "@workspace/ui/components/item"
-import { Spinner } from "@workspace/ui/components/spinner"
+} from "@vpf/ui/components/item"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function SpinnerDemo() {
   return (

@@ -1,6 +1,6 @@
 "use client"
 
-import { Badge } from "@workspace/ui/components/badge"
+import { Badge } from "@vpf/ui/components/badge"
 
 import {
 	PropsPlayground,

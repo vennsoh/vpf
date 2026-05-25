@@ -4,7 +4,7 @@ import * as React from "react"
 import { ArchiveX, Command, File, Inbox, Send, Trash2 } from "lucide-react"
 
 import { NavUser } from "@/components/blocks/sidebar/sidebar-09/components/nav-user"
-import { Label } from "@workspace/ui/components/label"
+import { Label } from "@vpf/ui/components/label"
 import {
   Sidebar,
   SidebarContent,
@@ -17,8 +17,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@workspace/ui/components/sidebar"
-import { Switch } from "@workspace/ui/components/switch"
+} from "@vpf/ui/components/sidebar"
+import { Switch } from "@vpf/ui/components/switch"
 
 // This is sample data
 const data = {

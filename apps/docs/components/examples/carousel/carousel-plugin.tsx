@@ -3,14 +3,14 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 
-import { Card, CardContent } from "@workspace/ui/components/card"
+import { Card, CardContent } from "@vpf/ui/components/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@workspace/ui/components/carousel"
+} from "@vpf/ui/components/carousel"
 
 export default function CarouselPlugin() {
   const plugin = React.useRef(

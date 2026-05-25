@@ -1,5 +1,5 @@
-import { Button } from "@workspace/ui/components/button"
-import { Spinner } from "@workspace/ui/components/spinner"
+import { Button } from "@vpf/ui/components/button"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function ButtonLoading() {
   return (

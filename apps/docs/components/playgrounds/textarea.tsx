@@ -1,6 +1,6 @@
 "use client"
 
-import { Textarea } from "@workspace/ui/components/textarea"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 import {
 	PropsPlayground,

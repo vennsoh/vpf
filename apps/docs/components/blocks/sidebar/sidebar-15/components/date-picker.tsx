@@ -1,8 +1,8 @@
-import { Calendar } from "@workspace/ui/components/calendar"
+import { Calendar } from "@vpf/ui/components/calendar"
 import {
   SidebarGroup,
   SidebarGroupContent,
-} from "@workspace/ui/components/sidebar"
+} from "@vpf/ui/components/sidebar"
 
 export function DatePicker() {
   return (

@@ -1,5 +1,5 @@
-import { Label } from "@workspace/ui/components/label"
-import { Switch } from "@workspace/ui/components/switch"
+import { Label } from "@vpf/ui/components/label"
+import { Switch } from "@vpf/ui/components/switch"
 
 export default function SwitchDemo() {
   return (

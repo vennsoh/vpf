@@ -10,7 +10,7 @@ Turborepo + pnpm monorepo.
 
 - `apps/web` — personal portfolio site (Next.js 16, port 3000)
 - `apps/docs` — design system showcase (Next.js 16, port 3001)
-- `packages/ui` — shared `@workspace/ui` library (shadcn primitives on top of **Base-UI**, not Radix)
+- `packages/ui` — shared `@vpf/ui` library (shadcn primitives on top of **Base-UI**, not Radix)
 - `packages/eslint-config`, `packages/typescript-config` — shared configs
 
 ## Commands
@@ -25,7 +25,7 @@ There is no CI — `pnpm lint && pnpm typecheck` is the gate before committing.
 ## Conventions
 
 - **Base-UI, not Radix.** Do not add `@radix-ui/*` dependencies. The UI library wraps Base-UI primitives.
-- **Reusable components live in `packages/ui`**, consumed as `@workspace/ui/components/<name>`. Do not add primitives directly inside `apps/*`.
+- **Reusable components live in `packages/ui`**, consumed as `@vpf/ui/components/<name>`. Do not add primitives directly inside `apps/*`.
 - TS errors inside `apps/docs/components/examples/**` and `apps/docs/components/blocks/**` are expected — these are vendored from shadcn and assume Radix prop shapes. They are excluded from `apps/docs`'s typecheck and Base-UI ignores unknown props at runtime. **Don't hand-edit them, and don't try to "fix" their types** — they will be overwritten by `pnpm sync:registry`.
 - Prettier: LF, no semicolons, double quotes, 2-space tabs, trailing comma `es5`, print width 80. `prettier-plugin-tailwindcss` sorts Tailwind classes (including inside `cn()` and `cva()`).
 

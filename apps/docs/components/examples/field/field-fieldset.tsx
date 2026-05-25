@@ -5,8 +5,8 @@ import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@workspace/ui/components/field"
-import { Input } from "@workspace/ui/components/input"
+} from "@vpf/ui/components/field"
+import { Input } from "@vpf/ui/components/input"
 
 export default function FieldFieldset() {
   return (

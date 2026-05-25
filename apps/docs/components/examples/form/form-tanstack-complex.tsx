@@ -6,9 +6,9 @@ import { useForm } from "@tanstack/react-form"
 import { toast } from "sonner"
 import * as z from "zod"
 
-import { Button } from "@workspace/ui/components/button"
-import { Card, CardContent, CardFooter } from "@workspace/ui/components/card"
-import { Checkbox } from "@workspace/ui/components/checkbox"
+import { Button } from "@vpf/ui/components/button"
+import { Card, CardContent, CardFooter } from "@vpf/ui/components/card"
+import { Checkbox } from "@vpf/ui/components/checkbox"
 import {
   Field,
   FieldContent,
@@ -20,19 +20,19 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@workspace/ui/components/field"
+} from "@vpf/ui/components/field"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@workspace/ui/components/radio-group"
+} from "@vpf/ui/components/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select"
-import { Switch } from "@workspace/ui/components/switch"
+} from "@vpf/ui/components/select"
+import { Switch } from "@vpf/ui/components/switch"
 
 const addons = [
   {

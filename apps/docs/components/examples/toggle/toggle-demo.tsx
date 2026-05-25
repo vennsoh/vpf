@@ -1,6 +1,6 @@
 import { BookmarkIcon } from "lucide-react"
 
-import { Toggle } from "@workspace/ui/components/toggle"
+import { Toggle } from "@vpf/ui/components/toggle"
 
 export default function ToggleDemo() {
   return (

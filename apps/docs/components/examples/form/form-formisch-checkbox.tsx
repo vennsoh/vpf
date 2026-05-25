@@ -6,7 +6,7 @@ import type { SubmitHandler } from "@formisch/react"
 import { toast } from "sonner"
 import * as v from "valibot"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Card,
   CardContent,
@@ -14,8 +14,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
-import { Checkbox } from "@workspace/ui/components/checkbox"
+} from "@vpf/ui/components/card"
+import { Checkbox } from "@vpf/ui/components/checkbox"
 import {
   Field,
   FieldDescription,
@@ -25,7 +25,7 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@workspace/ui/components/field"
+} from "@vpf/ui/components/field"
 
 const tasks = [
   {

@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { MoreHorizontalIcon } from "lucide-react"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Dialog,
   DialogClose,
@@ -12,7 +12,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@workspace/ui/components/dialog"
+} from "@vpf/ui/components/dialog"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,11 +20,11 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@workspace/ui/components/dropdown-menu"
-import { Field, FieldGroup, FieldLabel } from "@workspace/ui/components/field"
-import { Input } from "@workspace/ui/components/input"
-import { Label } from "@workspace/ui/components/label"
-import { Textarea } from "@workspace/ui/components/textarea"
+} from "@vpf/ui/components/dropdown-menu"
+import { Field, FieldGroup, FieldLabel } from "@vpf/ui/components/field"
+import { Input } from "@vpf/ui/components/input"
+import { Label } from "@vpf/ui/components/label"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function DropdownMenuDialog() {
   const [showNewDialog, setShowNewDialog] = useState(false)

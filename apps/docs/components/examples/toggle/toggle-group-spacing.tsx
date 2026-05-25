@@ -3,7 +3,7 @@ import { BookmarkIcon, HeartIcon, StarIcon } from "lucide-react"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@workspace/ui/components/toggle-group"
+} from "@vpf/ui/components/toggle-group"
 
 export default function ToggleGroupSpacing() {
   return (

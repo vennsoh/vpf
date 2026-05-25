@@ -1,8 +1,8 @@
-import { Label } from "@workspace/ui/components/label"
+import { Label } from "@vpf/ui/components/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@workspace/ui/components/radio-group"
+} from "@vpf/ui/components/radio-group"
 
 export default function RadioGroupDemo() {
   return (

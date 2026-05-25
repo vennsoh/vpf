@@ -2,7 +2,7 @@
 
 import { toast } from "sonner"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 
 export default function SonnerDemo() {
   return (

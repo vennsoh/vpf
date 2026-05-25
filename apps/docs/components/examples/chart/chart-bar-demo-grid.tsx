@@ -5,7 +5,7 @@ import { Bar, BarChart, CartesianGrid } from "recharts"
 import {
   ChartContainer,
   type ChartConfig,
-} from "@workspace/ui/components/chart"
+} from "@vpf/ui/components/chart"
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

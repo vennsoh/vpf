@@ -1,6 +1,6 @@
 "use client"
 
-import { Progress } from "@workspace/ui/components/progress"
+import { Progress } from "@vpf/ui/components/progress"
 
 import {
 	PropsPlayground,

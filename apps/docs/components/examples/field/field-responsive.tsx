@@ -1,4 +1,4 @@
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Field,
   FieldContent,
@@ -8,9 +8,9 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@workspace/ui/components/field"
-import { Input } from "@workspace/ui/components/input"
-import { Textarea } from "@workspace/ui/components/textarea"
+} from "@vpf/ui/components/field"
+import { Input } from "@vpf/ui/components/input"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function FieldResponsive() {
   return (

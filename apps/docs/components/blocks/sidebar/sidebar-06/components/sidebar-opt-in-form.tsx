@@ -1,12 +1,12 @@
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
-import { SidebarInput } from "@workspace/ui/components/sidebar"
+} from "@vpf/ui/components/card"
+import { SidebarInput } from "@vpf/ui/components/sidebar"
 
 export function SidebarOptInForm() {
   return (

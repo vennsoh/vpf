@@ -1,14 +1,14 @@
 import { BotIcon, ChevronDownIcon } from "lucide-react"
 
-import { Button } from "@workspace/ui/components/button"
-import { ButtonGroup } from "@workspace/ui/components/button-group"
+import { Button } from "@vpf/ui/components/button"
+import { ButtonGroup } from "@vpf/ui/components/button-group"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@workspace/ui/components/popover"
-import { Separator } from "@workspace/ui/components/separator"
-import { Textarea } from "@workspace/ui/components/textarea"
+} from "@vpf/ui/components/popover"
+import { Separator } from "@vpf/ui/components/separator"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function ButtonGroupPopover() {
   return (

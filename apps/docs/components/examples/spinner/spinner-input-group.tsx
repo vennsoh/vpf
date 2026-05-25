@@ -6,8 +6,8 @@ import {
   InputGroupButton,
   InputGroupInput,
   InputGroupTextarea,
-} from "@workspace/ui/components/input-group"
-import { Spinner } from "@workspace/ui/components/spinner"
+} from "@vpf/ui/components/input-group"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function SpinnerInputGroup() {
   return (

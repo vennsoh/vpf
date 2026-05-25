@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/blocks/sidebar/sidebar-16/components/si
 import {
   SidebarInset,
   SidebarProvider,
-} from "@workspace/ui/components/sidebar"
+} from "@vpf/ui/components/sidebar"
 
 export const iframeHeight = "800px"
 

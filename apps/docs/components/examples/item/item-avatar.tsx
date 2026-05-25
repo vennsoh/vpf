@@ -4,8 +4,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@workspace/ui/components/avatar"
-import { Button } from "@workspace/ui/components/button"
+} from "@vpf/ui/components/avatar"
+import { Button } from "@vpf/ui/components/button"
 import {
   Item,
   ItemActions,
@@ -13,7 +13,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@workspace/ui/components/item"
+} from "@vpf/ui/components/item"
 
 export default function ItemAvatar() {
   return (

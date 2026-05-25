@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { cn } from "@workspace/ui/lib/utils"
+import { cn } from "@vpf/ui/lib/utils"
 
 import { examples, blocks } from "@/lib/registry"
 

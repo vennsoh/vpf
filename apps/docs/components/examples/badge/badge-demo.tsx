@@ -1,6 +1,6 @@
 import { AlertCircleIcon, BadgeCheckIcon, CheckIcon } from "lucide-react"
 
-import { Badge } from "@workspace/ui/components/badge"
+import { Badge } from "@vpf/ui/components/badge"
 
 export default function BadgeDemo() {
   return (

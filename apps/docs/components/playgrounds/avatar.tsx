@@ -4,7 +4,7 @@ import {
 	Avatar,
 	AvatarFallback,
 	AvatarImage,
-} from "@workspace/ui/components/avatar"
+} from "@vpf/ui/components/avatar"
 
 import {
 	PropsPlayground,

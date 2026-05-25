@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@workspace/ui/components/breadcrumb"
+} from "@vpf/ui/components/breadcrumb"
 
 export default function BreadcrumbWithCustomSeparator() {
   return (

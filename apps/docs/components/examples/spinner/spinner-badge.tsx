@@ -1,5 +1,5 @@
-import { Badge } from "@workspace/ui/components/badge"
-import { Spinner } from "@workspace/ui/components/spinner"
+import { Badge } from "@vpf/ui/components/badge"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function SpinnerBadge() {
   return (

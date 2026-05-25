@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
 	CommandDialog,
 	CommandEmpty,
@@ -11,7 +11,7 @@ import {
 	CommandInput,
 	CommandItem,
 	CommandList,
-} from "@workspace/ui/components/command"
+} from "@vpf/ui/components/command"
 
 import {
 	COMPONENT_SLUGS,

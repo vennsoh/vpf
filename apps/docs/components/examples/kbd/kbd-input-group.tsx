@@ -4,8 +4,8 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@workspace/ui/components/input-group"
-import { Kbd } from "@workspace/ui/components/kbd"
+} from "@vpf/ui/components/input-group"
+import { Kbd } from "@vpf/ui/components/kbd"
 
 export default function KbdInputGroup() {
   return (

@@ -7,8 +7,8 @@ import {
 	IconDeviceMobile,
 } from "@tabler/icons-react"
 
-import { Button } from "@workspace/ui/components/button"
-import { cn } from "@workspace/ui/lib/utils"
+import { Button } from "@vpf/ui/components/button"
+import { cn } from "@vpf/ui/lib/utils"
 
 type Width = "desktop" | "tablet" | "mobile"
 

@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 
-import { ScrollArea, ScrollBar } from "@workspace/ui/components/scroll-area"
+import { ScrollArea, ScrollBar } from "@vpf/ui/components/scroll-area"
 
 export interface Artwork {
   artist: string

@@ -5,7 +5,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@workspace/ui/components/input-otp"
+} from "@vpf/ui/components/input-otp"
 
 export default function InputOTPWithSeparator() {
   return (

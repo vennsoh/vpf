@@ -6,8 +6,8 @@ import {
   Field,
   FieldDescription,
   FieldTitle,
-} from "@workspace/ui/components/field"
-import { Slider } from "@workspace/ui/components/slider"
+} from "@vpf/ui/components/field"
+import { Slider } from "@vpf/ui/components/slider"
 
 export default function FieldSlider() {
   const [value, setValue] = useState([200, 800])

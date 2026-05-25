@@ -1,15 +1,15 @@
 import { GalleryVerticalEnd } from "lucide-react"
 
-import { cn } from "@workspace/ui/lib/utils"
-import { Button } from "@workspace/ui/components/button"
+import { cn } from "@vpf/ui/lib/utils"
+import { Button } from "@vpf/ui/components/button"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@workspace/ui/components/field"
-import { Input } from "@workspace/ui/components/input"
+} from "@vpf/ui/components/field"
+import { Input } from "@vpf/ui/components/input"
 
 export function SignupForm({
   className,

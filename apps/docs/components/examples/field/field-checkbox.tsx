@@ -1,4 +1,4 @@
-import { Checkbox } from "@workspace/ui/components/checkbox"
+import { Checkbox } from "@vpf/ui/components/checkbox"
 import {
   Field,
   FieldContent,
@@ -8,7 +8,7 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from "@workspace/ui/components/field"
+} from "@vpf/ui/components/field"
 
 export default function FieldCheckbox() {
   return (

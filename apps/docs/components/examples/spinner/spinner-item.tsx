@@ -1,4 +1,4 @@
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Item,
   ItemActions,
@@ -7,9 +7,9 @@ import {
   ItemFooter,
   ItemMedia,
   ItemTitle,
-} from "@workspace/ui/components/item"
-import { Progress } from "@workspace/ui/components/progress"
-import { Spinner } from "@workspace/ui/components/spinner"
+} from "@vpf/ui/components/item"
+import { Progress } from "@vpf/ui/components/progress"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function SpinnerItem() {
   return (

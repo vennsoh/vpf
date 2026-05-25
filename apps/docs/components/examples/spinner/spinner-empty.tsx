@@ -1,4 +1,4 @@
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Empty,
   EmptyContent,
@@ -6,8 +6,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/empty"
-import { Spinner } from "@workspace/ui/components/spinner"
+} from "@vpf/ui/components/empty"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 export default function SpinnerEmpty() {
   return (

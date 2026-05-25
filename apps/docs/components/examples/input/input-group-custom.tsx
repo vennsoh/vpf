@@ -6,7 +6,7 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
-} from "@workspace/ui/components/input-group"
+} from "@vpf/ui/components/input-group"
 
 export default function InputGroupCustom() {
   return (

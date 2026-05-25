@@ -1,4 +1,4 @@
-import { Separator } from "@workspace/ui/components/separator"
+import { Separator } from "@vpf/ui/components/separator"
 
 export default function SeparatorDemo() {
   return (

@@ -6,7 +6,7 @@ import type { SubmitHandler } from "@formisch/react"
 import { toast } from "sonner"
 import * as v from "valibot"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Card,
   CardContent,
@@ -14,8 +14,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
-import { Checkbox } from "@workspace/ui/components/checkbox"
+} from "@vpf/ui/components/card"
+import { Checkbox } from "@vpf/ui/components/checkbox"
 import {
   Field,
   FieldContent,
@@ -27,19 +27,19 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@workspace/ui/components/field"
+} from "@vpf/ui/components/field"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@workspace/ui/components/radio-group"
+} from "@vpf/ui/components/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@workspace/ui/components/select"
-import { Switch } from "@workspace/ui/components/switch"
+} from "@vpf/ui/components/select"
+import { Switch } from "@vpf/ui/components/switch"
 
 const addons = [
   {

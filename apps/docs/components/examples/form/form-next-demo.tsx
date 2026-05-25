@@ -4,7 +4,7 @@ import * as React from "react"
 import Form from "next/form"
 import { toast } from "sonner"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Card,
   CardContent,
@@ -12,22 +12,22 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
-} from "@workspace/ui/components/field"
-import { Input } from "@workspace/ui/components/input"
+} from "@vpf/ui/components/field"
+import { Input } from "@vpf/ui/components/input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
   InputGroupTextarea,
-} from "@workspace/ui/components/input-group"
-import { Spinner } from "@workspace/ui/components/spinner"
+} from "@vpf/ui/components/input-group"
+import { Spinner } from "@vpf/ui/components/spinner"
 
 import { demoFormAction } from "./form-next-demo-action"
 import { type FormState } from "./form-next-demo-schema"

@@ -1,6 +1,6 @@
 "use client"
 
-import { Input } from "@workspace/ui/components/input"
+import { Input } from "@vpf/ui/components/input"
 
 import {
 	PropsPlayground,

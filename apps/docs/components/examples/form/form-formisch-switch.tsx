@@ -6,7 +6,7 @@ import type { SubmitHandler } from "@formisch/react"
 import { toast } from "sonner"
 import * as v from "valibot"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 import {
   Field,
   FieldContent,
@@ -22,8 +22,8 @@ import {
   FieldError,
   FieldGroup,
   FieldLabel,
-} from "@workspace/ui/components/field"
-import { Switch } from "@workspace/ui/components/switch"
+} from "@vpf/ui/components/field"
+import { Switch } from "@vpf/ui/components/switch"
 
 const FormSchema = v.object({
   twoFactor: v.pipe(

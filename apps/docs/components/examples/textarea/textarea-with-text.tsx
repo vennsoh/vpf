@@ -1,5 +1,5 @@
-import { Label } from "@workspace/ui/components/label"
-import { Textarea } from "@workspace/ui/components/textarea"
+import { Label } from "@vpf/ui/components/label"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function TextareaWithText() {
   return (

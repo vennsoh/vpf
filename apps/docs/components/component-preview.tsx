@@ -5,7 +5,7 @@ import {
 	TabsContent,
 	TabsList,
 	TabsTrigger,
-} from "@workspace/ui/components/tabs"
+} from "@vpf/ui/components/tabs"
 
 type ComponentPreviewProps = {
 	name: string

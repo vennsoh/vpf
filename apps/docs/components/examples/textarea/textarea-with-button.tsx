@@ -1,5 +1,5 @@
-import { Button } from "@workspace/ui/components/button"
-import { Textarea } from "@workspace/ui/components/textarea"
+import { Button } from "@vpf/ui/components/button"
+import { Textarea } from "@vpf/ui/components/textarea"
 
 export default function TextareaWithButton() {
   return (

@@ -13,8 +13,8 @@
     "sync:registry": "tsx scripts/sync-shadcn-registry.ts"
   },
   "devDependencies": {
-    "@workspace/eslint-config": "workspace:*",
-    "@workspace/typescript-config": "workspace:*",
+    "@vpf/eslint-config": "workspace:*",
+    "@vpf/typescript-config": "workspace:*",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tsx": "^4.20.0",

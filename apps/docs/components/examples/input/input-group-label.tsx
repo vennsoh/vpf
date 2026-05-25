@@ -5,13 +5,13 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@workspace/ui/components/input-group"
-import { Label } from "@workspace/ui/components/label"
+} from "@vpf/ui/components/input-group"
+import { Label } from "@vpf/ui/components/label"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@workspace/ui/components/tooltip"
+} from "@vpf/ui/components/tooltip"
 
 export default function InputGroupLabel() {
   return (

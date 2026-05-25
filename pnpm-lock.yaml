@@ -8,10 +8,10 @@ importers:
 
   .:
     devDependencies:
-      '@workspace/eslint-config':
+      '@vpf/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
-      '@workspace/typescript-config':
+      '@vpf/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
       prettier:
@@ -59,7 +59,7 @@ importers:
       '@tanstack/react-table':
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@workspace/ui':
+      '@vpf/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       date-fns:
@@ -126,10 +126,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
-      '@workspace/eslint-config':
+      '@vpf/eslint-config':
         specifier: workspace:^
         version: link:../../packages/eslint-config
-      '@workspace/typescript-config':
+      '@vpf/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       eslint:
@@ -144,7 +144,7 @@ importers:
       '@tabler/icons-react':
         specifier: ^3.44.0
         version: 3.44.0(react@19.2.4)
-      '@workspace/ui':
+      '@vpf/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -172,10 +172,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
-      '@workspace/eslint-config':
+      '@vpf/eslint-config':
         specifier: workspace:^
         version: link:../../packages/eslint-config
-      '@workspace/typescript-config':
+      '@vpf/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       eslint:
@@ -307,10 +307,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
-      '@workspace/eslint-config':
+      '@vpf/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@workspace/typescript-config':
+      '@vpf/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       eslint:

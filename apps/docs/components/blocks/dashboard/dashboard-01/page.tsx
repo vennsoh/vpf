@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/blocks/dashboard/dashboard-01/component
 import {
   SidebarInset,
   SidebarProvider,
-} from "@workspace/ui/components/sidebar"
+} from "@vpf/ui/components/sidebar"
 
 import data from "./data.json"
 

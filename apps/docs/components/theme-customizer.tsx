@@ -3,24 +3,24 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@vpf/ui/components/button"
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@workspace/ui/components/popover"
+} from "@vpf/ui/components/popover"
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@workspace/ui/components/select"
-import { Slider } from "@workspace/ui/components/slider"
+} from "@vpf/ui/components/select"
+import { Slider } from "@vpf/ui/components/slider"
 import {
 	ToggleGroup,
 	ToggleGroupItem,
-} from "@workspace/ui/components/toggle-group"
+} from "@vpf/ui/components/toggle-group"
 
 import { useDesignSystem } from "@/components/design-system-provider"
 

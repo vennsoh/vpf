@@ -6,7 +6,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 
 import {
 	COMPONENT_SLUGS,

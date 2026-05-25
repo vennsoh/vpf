@@ -1,4 +1,4 @@
-import { Skeleton } from "@workspace/ui/components/skeleton"
+import { Skeleton } from "@vpf/ui/components/skeleton"
 
 export default function SkeletonDemo() {
   return (

@@ -3,15 +3,15 @@
 import * as React from "react"
 import { ArrowRightIcon } from "lucide-react"
 
-import { Button } from "@workspace/ui/components/button"
-import { ButtonGroup } from "@workspace/ui/components/button-group"
-import { Input } from "@workspace/ui/components/input"
+import { Button } from "@vpf/ui/components/button"
+import { ButtonGroup } from "@vpf/ui/components/button-group"
+import { Input } from "@vpf/ui/components/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-} from "@workspace/ui/components/select"
+} from "@vpf/ui/components/select"
 
 const CURRENCIES = [
   {

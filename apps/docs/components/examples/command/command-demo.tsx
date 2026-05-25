@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@workspace/ui/components/command"
+} from "@vpf/ui/components/command"
 
 export default function CommandDemo() {
   return (

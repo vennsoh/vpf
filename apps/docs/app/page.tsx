@@ -5,7 +5,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@workspace/ui/components/card"
+} from "@vpf/ui/components/card"
 
 const SECTIONS: { href: string; title: string; description: string }[] = [
 	{
@@ -30,7 +30,7 @@ const SECTIONS: { href: string; title: string; description: string }[] = [
 		href: "#",
 		title: "Getting Started",
 		description:
-			"Conventions, theming, and how to wire @workspace/ui into a new app. (Coming soon.)",
+			"Conventions, theming, and how to wire @vpf/ui into a new app. (Coming soon.)",
 	},
 ]
 

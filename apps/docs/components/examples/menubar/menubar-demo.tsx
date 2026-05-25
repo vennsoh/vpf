@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@workspace/ui/components/menubar"
+} from "@vpf/ui/components/menubar"
 
 export default function MenubarDemo() {
   return (
