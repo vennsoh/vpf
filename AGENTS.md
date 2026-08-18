@@ -29,6 +29,15 @@ There is no CI — `pnpm lint && pnpm typecheck` is the gate before committing.
 - TS errors inside `apps/docs/components/examples/**` and `apps/docs/components/blocks/**` are expected — these are vendored from shadcn and assume Radix prop shapes. They are excluded from `apps/docs`'s typecheck and Base-UI ignores unknown props at runtime. **Don't hand-edit them, and don't try to "fix" their types** — they will be overwritten by `pnpm sync:registry`.
 - Prettier: LF, no semicolons, double quotes, 2-space tabs, trailing comma `es5`, print width 80. `prettier-plugin-tailwindcss` sorts Tailwind classes (including inside `cn()` and `cva()`).
 
+## Typography
+
+The type system is [Geist](https://vercel.com/font), self-hosted through the `geist` npm package (**not** `next/font/google` — Geist Pixel isn't on Google Fonts).
+
+- Each app declares its faces in `apps/<app>/lib/fonts.ts` and spreads the exported `fontVariables` onto `<html>`. `next/font` must be called from the app, so this is the one place font loading lives — do not add `next` or `next/font` to `packages/ui`.
+- The **tokens** live in `packages/ui/src/styles/globals.css` under `@theme inline`: `--font-sans`, `--font-heading`, `--font-mono`, `--font-pixel`, and `--font-pixel-{grid,circle,triangle,line}`. These read the `--font-geist-*` variables the apps supply, and each stack degrades on its own if a face isn't loaded.
+- **Components must use the token utilities** (`font-sans`, `font-heading`, `font-mono`, `font-pixel`) and never a literal family name or a raw `--font-geist-*` variable.
+- `apps/web` loads Sans, Mono, and Pixel Square. `apps/docs` additionally loads the four other pixel shapes because `/typography` documents them — product apps should only load the shapes they actually render.
+
 ## Dev env
 
 - `scripts/dev.mjs` reads `.env.local` and injects vars into `process.env`. App selection via `PORTLESS_APP` or `PORT`.
