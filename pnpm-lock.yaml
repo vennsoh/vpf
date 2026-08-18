@@ -71,6 +71,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.2.8)
+      geist:
+        specifier: ^1.7.2
+        version: 1.7.2(next@16.3.1(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))
       input-otp:
         specifier: ^1.4.2
         version: 1.4.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -147,6 +150,9 @@ importers:
       '@vpf/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      geist:
+        specifier: ^1.7.2
+        version: 1.7.2(next@16.3.1(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))
       next:
         specifier: 16.3.1
         version: 16.3.1(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -3013,6 +3019,11 @@ packages:
 
   fuzzysort@3.1.0:
     resolution: {integrity: sha512-sR9BNCjBg6LNgwvxlBd0sBABvQitkLzoVY9MYYROQVX/FvfJ4Mai9LsGhDgd8qYdds0bY77VzYd5iuB+v5rwQQ==, tarball: https://packages.atlassian.com/api/npm/npm-remote/fuzzysort/-/fuzzysort-3.1.0.tgz}
+
+  geist@1.7.2:
+    resolution: {integrity: sha512-Gu5lDFa3pLRyoBlBPf0QIFHVdWAnpco7fS1bJm41jyLPFoguBgiubseUN2oLXMgqZ7uxAxDoXcHMhCY/fOTTgg==, tarball: https://packages.atlassian.com/api/npm/npm-remote/geist/-/geist-1.7.2.tgz}
+    peerDependencies:
+      next: '>=13.2.0'
 
   generator-function@2.0.1:
     resolution: {integrity: sha512-SFdFmIJi+ybC0vjlHN0ZGVGHc3lgE0DxPAT0djjVg+kjOnSqclqmj0KQ7ykTOLP6YxoqOvuAODGdcHJn+43q3g==, tarball: https://packages.atlassian.com/api/npm/npm-remote/generator-function/-/generator-function-2.0.1.tgz}
@@ -7317,6 +7328,10 @@ snapshots:
   functions-have-names@1.2.3: {}
 
   fuzzysort@3.1.0: {}
+
+  geist@1.7.2(next@16.3.1(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)):
+    dependencies:
+      next: 16.3.1(@types/node@26.2.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
 
   generator-function@2.0.1: {}
 
