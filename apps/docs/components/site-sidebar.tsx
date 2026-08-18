@@ -134,10 +134,6 @@ export function SiteSidebar() {
 	return (
 		<aside className="sticky top-14 hidden h-[calc(100svh-3.5rem)] w-[250px] shrink-0 overflow-y-auto border-r px-3 py-6 md:block">
 			<nav className="flex flex-col gap-6">
-				<SidebarSection title="Getting Started">
-					<NavLink href="/" label="Introduction" />
-				</SidebarSection>
-
 				<SidebarSection title="Components">
 					{componentSlugs.map((slug) => (
 						<NavLink

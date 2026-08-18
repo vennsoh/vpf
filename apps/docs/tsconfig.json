@@ -1,7 +1,6 @@
 {
 	"extends": "@vpf/typescript-config/nextjs.json",
 	"compilerOptions": {
-		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./*"]
 		},

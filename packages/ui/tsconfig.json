@@ -1,7 +1,6 @@
 {
   "extends": "@vpf/typescript-config/react-library.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@vpf/ui/*": ["./src/*"]
     }

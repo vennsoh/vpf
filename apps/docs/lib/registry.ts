@@ -18,9 +18,11 @@ export const COMPONENT_SLUGS = [
 	"alert",
 	"alert-dialog",
 	"aspect-ratio",
+	"attachment",
 	"avatar",
 	"badge",
 	"breadcrumb",
+	"bubble",
 	"button",
 	"button-group",
 	"calendar",
@@ -45,7 +47,10 @@ export const COMPONENT_SLUGS = [
 	"item",
 	"kbd",
 	"label",
+	"marker",
 	"menubar",
+	"message",
+	"message-scroller",
 	"native-select",
 	"navigation-menu",
 	"pagination",
@@ -135,6 +140,10 @@ const COMPONENT_META: Record<string, ComponentMeta> = {
 		title: "Aspect Ratio",
 		description: "Displays content within a desired ratio.",
 	},
+	attachment: {
+		title: "Attachment",
+		description: "Displays a file or image with metadata, upload state, and actions.",
+	},
 	avatar: {
 		title: "Avatar",
 		description: "Image element with a fallback for representing a user.",
@@ -146,6 +155,10 @@ const COMPONENT_META: Record<string, ComponentMeta> = {
 	breadcrumb: {
 		title: "Breadcrumb",
 		description: "Hierarchy of links to the current resource.",
+	},
+	bubble: {
+		title: "Bubble",
+		description: "Conversational content in a message bubble with variants and reactions.",
 	},
 	button: {
 		title: "Button",
@@ -243,9 +256,21 @@ const COMPONENT_META: Record<string, ComponentMeta> = {
 		title: "Label",
 		description: "Accessible label associated with form controls.",
 	},
+	marker: {
+		title: "Marker",
+		description: "Inline status, system note, or labeled separator in a conversation.",
+	},
 	menubar: {
 		title: "Menubar",
 		description: "Persistent menu commonly found at the top of an app.",
+	},
+	message: {
+		title: "Message",
+		description: "A message in a conversation with avatar, header, footer, and alignment.",
+	},
+	"message-scroller": {
+		title: "Message Scroller",
+		description: "Chat scroll container that anchors turns and follows new messages.",
 	},
 	"native-select": {
 		title: "Native Select",
