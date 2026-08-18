@@ -1,4 +1,4 @@
-# vpf — design system + portfolio monorepo
+# Personal playground
 
 Turborepo + pnpm workspace. Built on the shadcn/ui monorepo template.
 
