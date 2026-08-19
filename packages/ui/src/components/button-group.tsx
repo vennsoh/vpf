@@ -1,3 +1,4 @@
+import * as React from "react"
 import { mergeProps } from "@base-ui/react/merge-props"
 import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -39,10 +40,12 @@ function ButtonGroup({
 }
 
 function ButtonGroupText({
+  asChild,
+  children,
   className,
   render,
   ...props
-}: useRender.ComponentProps<"div">) {
+}: useRender.ComponentProps<"div"> & { asChild?: boolean }) {
   return useRender({
     defaultTagName: "div",
     props: mergeProps<"div">(
@@ -54,7 +57,9 @@ function ButtonGroupText({
       },
       props
     ),
-    render,
+    render: asChild
+      ? (React.Children.only(children) as React.ReactElement)
+      : render,
     state: {
       slot: "button-group-text",
     },

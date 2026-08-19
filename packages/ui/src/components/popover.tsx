@@ -4,13 +4,40 @@ import * as React from "react"
 import { Popover as PopoverPrimitive } from "@base-ui/react/popover"
 
 import { cn } from "@vpf/ui/lib/utils"
+import { Button } from "@vpf/ui/components/button"
+
+function isNativeButtonElement(node: React.ReactNode) {
+  return (
+    React.isValidElement(node) &&
+    (node.type === "button" || node.type === Button)
+  )
+}
 
 function Popover({ ...props }: PopoverPrimitive.Root.Props) {
   return <PopoverPrimitive.Root data-slot="popover" {...props} />
 }
 
-function PopoverTrigger({ ...props }: PopoverPrimitive.Trigger.Props) {
-  return <PopoverPrimitive.Trigger data-slot="popover-trigger" {...props} />
+function PopoverTrigger({
+  asChild,
+  children,
+  nativeButton,
+  render,
+  ...props
+}: PopoverPrimitive.Trigger.Props & { asChild?: boolean }) {
+  return (
+    <PopoverPrimitive.Trigger
+      data-slot="popover-trigger"
+      nativeButton={
+        nativeButton ?? (!asChild || isNativeButtonElement(children))
+      }
+      render={
+        asChild ? (React.Children.only(children) as React.ReactElement) : render
+      }
+      {...props}
+    >
+      {asChild ? undefined : children}
+    </PopoverPrimitive.Trigger>
+  )
 }
 
 function PopoverContent({

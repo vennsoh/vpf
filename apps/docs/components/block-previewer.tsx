@@ -65,6 +65,7 @@ export function BlockPreviewer({ src, title }: Props) {
 				<iframe
 					src={src}
 					title={title}
+					suppressHydrationWarning
 					className="block h-[760px] w-full border-0"
 				/>
 			</div>

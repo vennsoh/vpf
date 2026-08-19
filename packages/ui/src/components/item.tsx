@@ -60,18 +60,26 @@ function Item({
   className,
   variant = "default",
   size = "default",
+  asChild,
+  children,
   render,
   ...props
-}: useRender.ComponentProps<"div"> & VariantProps<typeof itemVariants>) {
+}: useRender.ComponentProps<"div"> &
+  VariantProps<typeof itemVariants> & { asChild?: boolean }) {
+  const child = React.isValidElement<{ children?: React.ReactNode }>(children)
+    ? children
+    : undefined
+
   return useRender({
     defaultTagName: "div",
     props: mergeProps<"div">(
       {
         className: cn(itemVariants({ variant, size, className })),
+        children: asChild ? child?.props.children : children,
       },
       props
     ),
-    render,
+    render: asChild ? child : render,
     state: {
       slot: "item",
       variant,

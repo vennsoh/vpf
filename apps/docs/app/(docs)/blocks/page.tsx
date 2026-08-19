@@ -57,7 +57,7 @@ export default function BlocksIndexPage() {
 							href={`/blocks/${category}`}
 							className="group rounded-lg border bg-card transition-colors hover:bg-muted/50"
 						>
-							<Card className="h-full border-0 bg-transparent shadow-none">
+							<Card className="h-full border-0 bg-transparent shadow-none ring-0">
 								<CardHeader>
 									<CardTitle className="text-base">
 										{titleCase(category)}

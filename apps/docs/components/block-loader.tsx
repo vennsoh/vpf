@@ -1,10 +1,59 @@
 "use client"
 
-import * as React from "react"
+import type * as React from "react"
 import dynamic from "next/dynamic"
 
 type Props = {
-	importPath: string
+  importPath: string
+}
+
+type BlockModule = Record<string, unknown> & {
+  default?: React.ComponentType
+}
+
+function componentNameFromPath(blockPath: string) {
+  const fileName = blockPath.split("/").at(-1) ?? ""
+
+  return fileName
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join("")
+}
+
+function resolveBlockComponent(module: BlockModule, blockPath: string) {
+  const componentName = componentNameFromPath(blockPath)
+  const Component = module.default ?? module[componentName]
+
+  if (!Component) {
+    throw new Error(
+      `Block module "${blockPath}" does not export default or ${componentName}.`
+    )
+  }
+
+  return Component as React.ComponentType
+}
+
+const blockComponentCache = new Map<string, React.ComponentType>()
+
+function getBlockComponent(importPath: string) {
+  const cachedComponent = blockComponentCache.get(importPath)
+  if (cachedComponent) return cachedComponent
+
+  const blockPath = importPath.replace(/^@\/components\/blocks\//, "")
+  const Component = dynamic(
+    () =>
+      import(`@/components/blocks/${blockPath}`).then((module) => ({
+        default: resolveBlockComponent(module, blockPath),
+      })),
+    { ssr: false, loading: () => null }
+  )
+
+  blockComponentCache.set(importPath, Component)
+  return Component
+}
+
+function RenderBlock({ Component }: { Component: React.ComponentType }) {
+  return <Component />
 }
 
 /**
@@ -16,16 +65,5 @@ type Props = {
  * walks blocks.
  */
 export function BlockLoader({ importPath }: Props) {
-	const Component = React.useMemo(() => {
-		const blockPath = importPath.replace(/^@\/components\/blocks\//, "")
-		return dynamic(
-			() =>
-				import(`@/components/blocks/${blockPath}`).then((mod) => ({
-					default: (mod.default ?? mod) as React.ComponentType,
-				})),
-			{ ssr: false, loading: () => null }
-		)
-	}, [importPath])
-
-	return <Component />
+  return <RenderBlock Component={getBlockComponent(importPath)} />
 }

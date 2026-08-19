@@ -20,6 +20,38 @@ const ToggleGroupContext = React.createContext<
   orientation: "horizontal",
 })
 
+type ToggleGroupSharedProps = Omit<
+  ToggleGroupPrimitive.Props,
+  "defaultValue" | "multiple" | "onValueChange" | "value"
+> &
+  VariantProps<typeof toggleVariants> & {
+    spacing?: number
+    orientation?: "horizontal" | "vertical"
+  }
+
+type ToggleGroupProps =
+  | (ToggleGroupSharedProps &
+      Pick<
+        ToggleGroupPrimitive.Props,
+        "defaultValue" | "multiple" | "onValueChange" | "value"
+      > & {
+        type?: undefined
+      })
+  | (ToggleGroupSharedProps & {
+      type: "single"
+      multiple?: never
+      value?: string
+      defaultValue?: string
+      onValueChange?: (value: string) => void
+    })
+  | (ToggleGroupSharedProps & {
+      type: "multiple"
+      multiple?: never
+      value?: readonly string[]
+      defaultValue?: readonly string[]
+      onValueChange?: (value: string[]) => void
+    })
+
 function ToggleGroup({
   className,
   variant,
@@ -27,12 +59,26 @@ function ToggleGroup({
   spacing = 2,
   orientation = "horizontal",
   children,
+  type,
+  value,
+  defaultValue,
+  multiple,
+  onValueChange,
   ...props
-}: ToggleGroupPrimitive.Props &
-  VariantProps<typeof toggleVariants> & {
-    spacing?: number
-    orientation?: "horizontal" | "vertical"
-  }) {
+}: ToggleGroupProps) {
+  const usesRadixValueShape = type !== undefined
+  const isRadixSingle = type === "single"
+  const baseValue = isRadixSingle
+    ? value === undefined
+      ? undefined
+      : [value]
+    : value
+  const baseDefaultValue = isRadixSingle
+    ? defaultValue === undefined
+      ? undefined
+      : [defaultValue]
+    : defaultValue
+
   return (
     <ToggleGroupPrimitive
       data-slot="toggle-group"
@@ -40,6 +86,28 @@ function ToggleGroup({
       data-size={size}
       data-spacing={spacing}
       data-orientation={orientation}
+      multiple={usesRadixValueShape ? type === "multiple" : multiple}
+      value={baseValue}
+      defaultValue={baseDefaultValue}
+      onValueChange={(nextValue, eventDetails) => {
+        if (isRadixSingle) {
+          const handleValueChange = onValueChange as
+            ((value: string) => void) | undefined
+          handleValueChange?.(nextValue[0] ?? "")
+          return
+        }
+
+        if (!usesRadixValueShape) {
+          const handleValueChange = onValueChange as
+            ToggleGroupPrimitive.Props["onValueChange"] | undefined
+          handleValueChange?.(nextValue, eventDetails)
+          return
+        }
+
+        const handleValueChange = onValueChange as
+          ((value: string[]) => void) | undefined
+        handleValueChange?.(nextValue)
+      }}
       style={{ "--gap": spacing } as React.CSSProperties}
       className={cn(
         "group/toggle-group flex w-fit flex-row items-center gap-[--spacing(var(--gap))] rounded-lg data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-vertical:flex-col data-vertical:items-stretch",

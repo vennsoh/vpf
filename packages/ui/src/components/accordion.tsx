@@ -3,11 +3,62 @@ import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion"
 import { cn } from "@vpf/ui/lib/utils"
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react"
 
-function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
+type AccordionProps = Omit<
+  AccordionPrimitive.Root.Props,
+  "defaultValue" | "multiple" | "onValueChange" | "value"
+> & {
+  type?: "single" | "multiple"
+  collapsible?: boolean
+  defaultValue?: AccordionPrimitive.Root.Value | string
+  multiple?: boolean
+  onValueChange?: (
+    value: AccordionPrimitive.Root.Value | string,
+    eventDetails: AccordionPrimitive.Root.ChangeEventDetails
+  ) => void
+  value?: AccordionPrimitive.Root.Value | string
+}
+
+function Accordion({
+  className,
+  type,
+  collapsible,
+  defaultValue,
+  multiple,
+  onValueChange,
+  value,
+  ...props
+}: AccordionProps) {
+  const usesRadixValueShape = type !== undefined
+  const preventsEmptyValue = type === "single" && collapsible !== true
+  const toBaseValue = (
+    nextValue: AccordionPrimitive.Root.Value | string | undefined
+  ) => (typeof nextValue === "string" ? [nextValue] : nextValue)
+
   return (
     <AccordionPrimitive.Root
       data-slot="accordion"
+      data-collapsible={collapsible || undefined}
       className={cn("flex w-full flex-col", className)}
+      defaultValue={toBaseValue(defaultValue)}
+      multiple={multiple ?? (type === "multiple" ? true : undefined)}
+      onValueChange={
+        preventsEmptyValue || onValueChange
+          ? (nextValue, eventDetails) => {
+              if (preventsEmptyValue && nextValue.length === 0) {
+                eventDetails.cancel()
+                return
+              }
+
+              onValueChange?.(
+                usesRadixValueShape && type === "single"
+                  ? (nextValue[0] ?? "")
+                  : nextValue,
+                eventDetails
+              )
+            }
+          : undefined
+      }
+      value={toBaseValue(value)}
       {...props}
     />
   )
@@ -39,8 +90,14 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <IconChevronDown data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <IconChevronUp data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <IconChevronDown
+          data-slot="accordion-trigger-icon"
+          className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden"
+        />
+        <IconChevronUp
+          data-slot="accordion-trigger-icon"
+          className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
