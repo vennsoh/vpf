@@ -7,16 +7,61 @@ import { cn } from "@vpf/ui/lib/utils"
 import { Button } from "@vpf/ui/components/button"
 import { IconX } from "@tabler/icons-react"
 
+function isNativeButtonElement(node: React.ReactNode) {
+  return (
+    React.isValidElement(node) &&
+    (node.type === "button" || node.type === Button)
+  )
+}
+
 function Sheet({ ...props }: SheetPrimitive.Root.Props) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />
 }
 
-function SheetTrigger({ ...props }: SheetPrimitive.Trigger.Props) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />
+function SheetTrigger({
+  asChild,
+  children,
+  nativeButton,
+  render,
+  ...props
+}: SheetPrimitive.Trigger.Props & { asChild?: boolean }) {
+  return (
+    <SheetPrimitive.Trigger
+      data-slot="sheet-trigger"
+      nativeButton={
+        nativeButton ?? (!asChild || isNativeButtonElement(children))
+      }
+      render={
+        asChild ? (React.Children.only(children) as React.ReactElement) : render
+      }
+      {...props}
+    >
+      {asChild ? undefined : children}
+    </SheetPrimitive.Trigger>
+  )
 }
 
-function SheetClose({ ...props }: SheetPrimitive.Close.Props) {
-  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />
+function SheetClose({
+  asChild,
+  children,
+  nativeButton,
+  render,
+  ...props
+}: SheetPrimitive.Close.Props & { asChild?: boolean }) {
+  return (
+    <SheetPrimitive.Close
+      data-slot="sheet-close"
+      nativeButton={
+        nativeButton ?? (!asChild || isNativeButtonElement(children))
+      }
+      render={
+        asChild ? (React.Children.only(children) as React.ReactElement) : render
+      }
+      {...props}
+    >
+      {asChild ? undefined : children}
+    </SheetPrimitive.Close>
+  )
 }
 
 function SheetPortal({ ...props }: SheetPrimitive.Portal.Props) {
@@ -70,8 +115,7 @@ function SheetContent({
               />
             }
           >
-            <IconX
-            />
+            <IconX />
             <span className="sr-only">Close</span>
           </SheetPrimitive.Close>
         )}

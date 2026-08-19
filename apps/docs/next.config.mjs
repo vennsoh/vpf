@@ -5,10 +5,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	transpilePackages: ["@vpf/ui"],
-	turbopack: {
-		root: path.join(__dirname, "../.."),
-	},
+	devIndicators: false,
+  transpilePackages: ["@vpf/ui"],
+  images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "images.unsplash.com",
+			},
+			{
+				protocol: "https",
+				hostname: "avatar.vercel.sh",
+			},
+		],
+  },
+  turbopack: {
+    root: path.join(__dirname, "../.."),
+  },
 }
 
 export default nextConfig

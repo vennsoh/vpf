@@ -11,16 +11,62 @@ function Dialog({ ...props }: DialogPrimitive.Root.Props) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />
 }
 
-function DialogTrigger({ ...props }: DialogPrimitive.Trigger.Props) {
-  return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
+function DialogTrigger({
+  asChild,
+  children,
+  nativeButton,
+  render,
+  ...props
+}: DialogPrimitive.Trigger.Props & { asChild?: boolean }) {
+  const child = React.isValidElement<{ children?: React.ReactNode }>(children)
+    ? children
+    : undefined
+
+  return (
+    <DialogPrimitive.Trigger
+      data-slot="dialog-trigger"
+      nativeButton={
+        asChild && typeof child?.type === "string"
+          ? child.type === "button"
+          : nativeButton
+      }
+      render={asChild ? child : render}
+      {...props}
+    >
+      {asChild ? child?.props.children : children}
+    </DialogPrimitive.Trigger>
+  )
 }
 
 function DialogPortal({ ...props }: DialogPrimitive.Portal.Props) {
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />
 }
 
-function DialogClose({ ...props }: DialogPrimitive.Close.Props) {
-  return <DialogPrimitive.Close data-slot="dialog-close" {...props} />
+function DialogClose({
+  asChild,
+  children,
+  nativeButton,
+  render,
+  ...props
+}: DialogPrimitive.Close.Props & { asChild?: boolean }) {
+  const child = React.isValidElement<{ children?: React.ReactNode }>(children)
+    ? children
+    : undefined
+
+  return (
+    <DialogPrimitive.Close
+      data-slot="dialog-close"
+      nativeButton={
+        asChild && typeof child?.type === "string"
+          ? child.type === "button"
+          : nativeButton
+      }
+      render={asChild ? child : render}
+      {...props}
+    >
+      {asChild ? child?.props.children : children}
+    </DialogPrimitive.Close>
+  )
 }
 
 function DialogOverlay({
@@ -70,8 +116,7 @@ function DialogContent({
               />
             }
           >
-            <IconX
-            />
+            <IconX />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}

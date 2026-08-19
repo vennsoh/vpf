@@ -35,9 +35,7 @@ export function ThemeCustomizer() {
 		<Popover>
 			<PopoverTrigger
 				render={
-					<Button variant="outline" size="sm">
-						Customize
-					</Button>
+					<Button variant="outline">Customize</Button>
 				}
 			/>
 			<PopoverContent align="end" className="w-80">

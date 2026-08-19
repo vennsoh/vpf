@@ -16,9 +16,10 @@ function Breadcrumb({ className, ...props }: React.ComponentProps<"nav">) {
   )
 }
 
-function BreadcrumbList({ className, ...props }: React.ComponentProps<"ol">) {
+function BreadcrumbList({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <ol
+    <div
+      role="list"
       data-slot="breadcrumb-list"
       className={cn(
         "flex flex-wrap items-center gap-1.5 text-sm wrap-break-word text-muted-foreground",
@@ -29,9 +30,10 @@ function BreadcrumbList({ className, ...props }: React.ComponentProps<"ol">) {
   )
 }
 
-function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
+function BreadcrumbItem({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <li
+    <div
+      role="listitem"
       data-slot="breadcrumb-item"
       className={cn("inline-flex items-center gap-1", className)}
       {...props}
@@ -40,10 +42,12 @@ function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 function BreadcrumbLink({
+  asChild,
+  children,
   className,
   render,
   ...props
-}: useRender.ComponentProps<"a">) {
+}: useRender.ComponentProps<"a"> & { asChild?: boolean }) {
   return useRender({
     defaultTagName: "a",
     props: mergeProps<"a">(
@@ -52,7 +56,9 @@ function BreadcrumbLink({
       },
       props
     ),
-    render,
+    render: asChild
+      ? (React.Children.only(children) as React.ReactElement)
+      : render,
     state: {
       slot: "breadcrumb-link",
     },
@@ -76,19 +82,17 @@ function BreadcrumbSeparator({
   children,
   className,
   ...props
-}: React.ComponentProps<"li">) {
+}: React.ComponentProps<"span">) {
   return (
-    <li
+    <span
       data-slot="breadcrumb-separator"
       role="presentation"
       aria-hidden="true"
       className={cn("[&>svg]:size-3.5", className)}
       {...props}
     >
-      {children ?? (
-        <IconChevronRight />
-      )}
-    </li>
+      {children ?? <IconChevronRight />}
+    </span>
   )
 }
 
@@ -107,8 +111,7 @@ function BreadcrumbEllipsis({
       )}
       {...props}
     >
-      <IconDots
-      />
+      <IconDots />
       <span className="sr-only">More</span>
     </span>
   )

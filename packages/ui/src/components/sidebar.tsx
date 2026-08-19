@@ -392,9 +392,12 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
 
 function SidebarGroupLabel({
   className,
+  asChild,
+  children,
   render,
   ...props
-}: useRender.ComponentProps<"div"> & React.ComponentProps<"div">) {
+}: useRender.ComponentProps<"div"> &
+  React.ComponentProps<"div"> & { asChild?: boolean }) {
   return useRender({
     defaultTagName: "div",
     props: mergeProps<"div">(
@@ -404,9 +407,11 @@ function SidebarGroupLabel({
           className
         ),
       },
-      props
+      asChild ? props : { ...props, children }
     ),
-    render,
+    render: asChild
+      ? (React.Children.only(children) as React.ReactElement)
+      : render,
     state: {
       slot: "sidebar-group-label",
       sidebar: "group-label",
@@ -416,9 +421,12 @@ function SidebarGroupLabel({
 
 function SidebarGroupAction({
   className,
+  asChild,
+  children,
   render,
   ...props
-}: useRender.ComponentProps<"button"> & React.ComponentProps<"button">) {
+}: useRender.ComponentProps<"button"> &
+  React.ComponentProps<"button"> & { asChild?: boolean }) {
   return useRender({
     defaultTagName: "button",
     props: mergeProps<"button">(
@@ -428,9 +436,11 @@ function SidebarGroupAction({
           className
         ),
       },
-      props
+      asChild ? props : { ...props, children }
     ),
-    render,
+    render: asChild
+      ? (React.Children.only(children) as React.ReactElement)
+      : render,
     state: {
       slot: "sidebar-group-action",
       sidebar: "group-action",
@@ -497,6 +507,8 @@ const sidebarMenuButtonVariants = cva(
 )
 
 function SidebarMenuButton({
+  asChild,
+  children,
   render,
   isActive = false,
   variant = "default",
@@ -506,6 +518,7 @@ function SidebarMenuButton({
   ...props
 }: useRender.ComponentProps<"button"> &
   React.ComponentProps<"button"> & {
+    asChild?: boolean
     isActive?: boolean
     tooltip?: string | React.ComponentProps<typeof TooltipContent>
   } & VariantProps<typeof sidebarMenuButtonVariants>) {
@@ -516,9 +529,23 @@ function SidebarMenuButton({
       {
         className: cn(sidebarMenuButtonVariants({ variant, size }), className),
       },
-      props
+      asChild ? props : { ...props, children }
     ),
-    render: !tooltip ? render : <TooltipTrigger render={render} />,
+    render: !tooltip ? (
+      asChild ? (
+        (React.Children.only(children) as React.ReactElement)
+      ) : (
+        render
+      )
+    ) : (
+      <TooltipTrigger
+        render={
+          asChild
+            ? (React.Children.only(children) as React.ReactElement)
+            : render
+        }
+      />
+    ),
     state: {
       slot: "sidebar-menu-button",
       sidebar: "menu-button",
@@ -552,11 +579,14 @@ function SidebarMenuButton({
 
 function SidebarMenuAction({
   className,
+  asChild,
+  children,
   render,
   showOnHover = false,
   ...props
 }: useRender.ComponentProps<"button"> &
   React.ComponentProps<"button"> & {
+    asChild?: boolean
     showOnHover?: boolean
   }) {
   return useRender({
@@ -570,9 +600,11 @@ function SidebarMenuAction({
           className
         ),
       },
-      props
+      asChild ? props : { ...props, children }
     ),
-    render,
+    render: asChild
+      ? (React.Children.only(children) as React.ReactElement)
+      : render,
     state: {
       slot: "sidebar-menu-action",
       sidebar: "menu-action",
@@ -664,6 +696,8 @@ function SidebarMenuSubItem({
 }
 
 function SidebarMenuSubButton({
+  asChild,
+  children,
   render,
   size = "md",
   isActive = false,
@@ -671,6 +705,7 @@ function SidebarMenuSubButton({
   ...props
 }: useRender.ComponentProps<"a"> &
   React.ComponentProps<"a"> & {
+    asChild?: boolean
     size?: "sm" | "md"
     isActive?: boolean
   }) {
@@ -683,9 +718,11 @@ function SidebarMenuSubButton({
           className
         ),
       },
-      props
+      asChild ? props : { ...props, children }
     ),
-    render,
+    render: asChild
+      ? (React.Children.only(children) as React.ReactElement)
+      : render,
     state: {
       slot: "sidebar-menu-sub-button",
       sidebar: "menu-sub-button",

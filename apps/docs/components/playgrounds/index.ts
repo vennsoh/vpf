@@ -22,6 +22,7 @@ export const PLAYGROUNDS: Record<string, ComponentType> = {
 	skeleton: dynamic(() => import("./skeleton")),
 	slider: dynamic(() => import("./slider")),
 	switch: dynamic(() => import("./switch")),
+	tabs: dynamic(() => import("./tabs")),
 	textarea: dynamic(() => import("./textarea")),
 	tooltip: dynamic(() => import("./tooltip")),
 }

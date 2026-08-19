@@ -229,7 +229,9 @@ async function listBlockSlugsResilient(): Promise<LocalBlockHint[]> {
 
 function rewriteImports(
 	source: string,
-	context?: { kind: "block"; category: string; slug: string }
+	context?:
+		| { kind: "block"; category: string; slug: string }
+		| { kind: "example"; name: string }
 ): string {
 	let out = source;
 	out = out.replace(
@@ -259,6 +261,21 @@ function rewriteImports(
 		out = out.replace(
 			/@\/registry\/new-york-v4\/charts\/([\w-]+)/g,
 			(_match, slug: string) => `@/components/blocks/charts/${slug}/${slug}`
+		);
+		if (context.slug === "chart-radar-label-custom") {
+			// Recharts includes this layout-only prop in custom tick callbacks.
+			// Consume it before the remaining SVG-safe props reach the native text node.
+			out = out.replace(
+				"tick={({ x, y, textAnchor, index, ...props }) => {",
+				"tick={({ x, y, textAnchor, verticalAnchor: _verticalAnchor, index, ...props }) => {"
+			);
+		}
+	}
+	if (context?.kind === "example" && context.name === "aspect-ratio-demo") {
+		// This image is always above the fold in the docs preview.
+		out = out.replace(
+			"        fill\n        className=",
+			'        fill\n        loading="eager"\n        className='
 		);
 	}
 	return out;
@@ -361,7 +378,10 @@ async function syncExamples(): Promise<Record<string, ExampleEntryOut[]>> {
 				const writtenSiblings = new Set<string>();
 				for (const file of item.files) {
 					if (!file.content) continue;
-					const rewritten = rewriteImports(file.content);
+					const rewritten = rewriteImports(file.content, {
+						kind: "example",
+						name,
+					});
 					const base = path.basename(file.path);
 					const target = path.join(componentDir, base);
 					await writeFileEnsuringDir(target, rewritten);
@@ -380,7 +400,10 @@ async function syncExamples(): Promise<Record<string, ExampleEntryOut[]>> {
 					// Fallback if no explicit example file type matched.
 					const base = path.basename(item.files[0].path);
 					primaryRelativeNoExt = base.replace(/\.tsx?$/, "");
-					primarySource = rewriteImports(item.files[0].content);
+					primarySource = rewriteImports(item.files[0].content, {
+						kind: "example",
+						name,
+					});
 					writtenSiblings.add(primaryRelativeNoExt);
 				}
 				if (primaryRelativeNoExt !== null) {

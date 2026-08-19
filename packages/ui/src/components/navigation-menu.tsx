@@ -1,3 +1,4 @@
+import * as React from "react"
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu"
 import { cva } from "class-variance-authority"
 
@@ -6,14 +7,18 @@ import { IconChevronDown } from "@tabler/icons-react"
 
 function NavigationMenu({
   align = "start",
+  viewport = true,
   className,
   children,
   ...props
 }: NavigationMenuPrimitive.Root.Props &
-  Pick<NavigationMenuPrimitive.Positioner.Props, "align">) {
+  Pick<NavigationMenuPrimitive.Positioner.Props, "align"> & {
+    viewport?: boolean
+  }) {
   return (
     <NavigationMenuPrimitive.Root
       data-slot="navigation-menu"
+      data-viewport={viewport}
       className={cn(
         "group/navigation-menu relative flex max-w-max flex-1 items-center justify-center",
         className
@@ -62,16 +67,32 @@ const navigationMenuTriggerStyle = cva(
 function NavigationMenuTrigger({
   className,
   children,
+  asChild,
+  nativeButton,
+  render,
   ...props
-}: NavigationMenuPrimitive.Trigger.Props) {
+}: NavigationMenuPrimitive.Trigger.Props & { asChild?: boolean }) {
+  const child = React.isValidElement<{ children?: React.ReactNode }>(children)
+    ? children
+    : undefined
+
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
       className={cn(navigationMenuTriggerStyle(), "group", className)}
+      nativeButton={
+        asChild && typeof child?.type === "string"
+          ? child.type === "button"
+          : nativeButton
+      }
+      render={asChild ? child : render}
       {...props}
     >
-      {children}{" "}
-      <IconChevronDown className="relative top-px ml-1 size-3 transition duration-300 group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180" aria-hidden="true" />
+      {asChild ? child?.props.children : children}{" "}
+      <IconChevronDown
+        className="relative top-px ml-1 size-3 transition duration-300 group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180"
+        aria-hidden="true"
+      />
     </NavigationMenuPrimitive.Trigger>
   )
 }
@@ -123,8 +144,15 @@ function NavigationMenuPositioner({
 
 function NavigationMenuLink({
   className,
+  asChild,
+  children,
+  render,
   ...props
-}: NavigationMenuPrimitive.Link.Props) {
+}: NavigationMenuPrimitive.Link.Props & { asChild?: boolean }) {
+  const child = React.isValidElement<{ children?: React.ReactNode }>(children)
+    ? children
+    : undefined
+
   return (
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
@@ -132,8 +160,11 @@ function NavigationMenuLink({
         "flex items-center gap-2 rounded-lg p-2 text-sm transition-all outline-none hover:bg-muted focus:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-muted/50 data-active:hover:bg-muted data-active:focus:bg-muted [&_svg:not([class*='size-'])]:size-4",
         className
       )}
+      render={asChild ? child : render}
       {...props}
-    />
+    >
+      {asChild ? child?.props.children : children}
+    </NavigationMenuPrimitive.Link>
   )
 }
 

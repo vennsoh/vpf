@@ -66,7 +66,7 @@ export default async function BlockCategoryPage({
 						href={`/blocks/${category}/${entry.slug}`}
 						className="group rounded-lg border bg-card transition-colors hover:bg-muted/50"
 					>
-						<Card className="h-full border-0 bg-transparent shadow-none">
+						<Card className="h-full border-0 bg-transparent shadow-none ring-0">
 							<CardHeader>
 								<CardTitle className="text-sm">
 									{titleFor(entry.slug, entry.title)}

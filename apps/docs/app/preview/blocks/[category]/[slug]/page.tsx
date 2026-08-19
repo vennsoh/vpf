@@ -1,7 +1,14 @@
 import { BlockLoader } from "@/components/block-loader"
 import { blocks } from "@/lib/registry"
+import { cn } from "@vpf/ui/lib/utils"
 
 type RouteParams = { category: string; slug: string }
+
+const FULL_WIDTH_CHARTS = new Set([
+	"chart-area-interactive",
+	"chart-bar-interactive",
+	"chart-line-interactive",
+])
 
 export default async function BlockPreviewPage({
 	params,
@@ -21,8 +28,17 @@ export default async function BlockPreviewPage({
 		)
 	}
 
+	const constrainChart =
+		category === "charts" && !FULL_WIDTH_CHARTS.has(entry.slug)
+
 	return (
-		<div className="min-h-svh bg-background">
+		<div
+			className={cn(
+				"min-h-svh bg-background",
+				constrainChart &&
+					"flex items-center justify-center p-6 [&>*]:w-full [&>*]:max-w-md"
+			)}
+		>
 			<BlockLoader importPath={entry.importPath} />
 		</div>
 	)
